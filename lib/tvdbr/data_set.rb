@@ -39,7 +39,7 @@ module Tvdbr
     # listify :lista, :listb
     def self.listify(*attrs)
       attrs.each do |a|
-        define_method(a) { self[a] ? self[a][1..-1].split("|").map(&:strip) : []  }
+        define_method(a) { self[a] ? self[a][0..-1].split("|").map(&:strip) : []  }
       end
     end
 
