@@ -11,6 +11,7 @@ module Tvdbr
     alias_property :overview, :description
     alias_property :first_aired, :original_air_date
     dateify :first_aired
+    listify :director
     listify :writer
     listify :guest_stars
     absolutize :filename
