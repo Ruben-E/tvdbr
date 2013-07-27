@@ -128,6 +128,11 @@ module Tvdbr
       self.get_with_key("/series/#{series_id}/banners.xml")['Banners']['Banner']
     end
 
+    # Returns a list of actors for the series
+    def series_actors(series_id)
+      self.get_with_key("/series/#{series_id}/actors.xml")['Actors']['Actor']
+    end
+
     # Returns a list of series and episode updates since given time
     # tvdb.find_updates_since(1.day.ago)
     # => { :series => [1,2,3], :episodes => [1,2,3], :time => '<stamp>'  }
